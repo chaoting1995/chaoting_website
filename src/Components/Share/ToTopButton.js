@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import styled from '@emotion/styled';
+import { theme } from '../../Style/theme';
 //-------------------匯入svg-----------------------//
 
 import { ReactComponent as TopArrow } from '../../images/TopArrow.svg';
@@ -13,7 +14,7 @@ const ToTopButtonWrap = styled.div`
   bottom: 100px;
   right: 25px;
   cursor: pointer;
-  background-color: rgb(102, 153, 204);
+  background-color: ${theme.header3Color};
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0;
   visibility: ${({ toTop }) => toTop};
   ${'' /* border: none;  */}
@@ -22,10 +23,10 @@ const ToTopButtonWrap = styled.div`
   line-height:60px;
   text-align: center;
   transition: 0.3s;
+  z-index: 999;
   ${'' /* &:hover {
     opacity: 1;
-  } */}
-  svg {
+  } */} svg {
     width: 37px;
     margin-right: 1px;
   }

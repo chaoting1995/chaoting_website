@@ -2,23 +2,19 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const ContainerWrap = styled.div`
-  max-width: 1070px;
+  max-width: 1040px;
   ${'' /* height: 700px; */}
   margin: 0 auto;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #faf;
+  ${'' /* background-color: #fff; */}
 `;
-//包Header、Wrap
+// 界定網頁內容寬度
 const Container = (props) => {
   return (
     <>
-      <ContainerWrap>
-        {props.children}
-        {/* <img src={haedImage} alt="s"></img> */}
-      </ContainerWrap>
-      ;
+      <ContainerWrap>{props.children}</ContainerWrap>;
     </>
   );
 };

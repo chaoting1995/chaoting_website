@@ -35,6 +35,11 @@ const HomeCoverWrap = styled.div`
     top: 50%;
     right: 10%;
     color: #fff;
+    h1 {
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+
     p {
       color: #dedede;
     }

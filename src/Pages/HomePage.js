@@ -6,21 +6,18 @@ import Container from '../Components/Share/Container';
 //--------------------匯入子元件-----------------------//
 // 封面
 import HomeCover from '../Components/Home/HomeCover';
+import HomeContent1 from '../Components/Home/HomeContent1';
+import HomeContent2 from '../Components/Home/HomeContent2';
+import HomeContent3 from '../Components/Home/HomeContent3';
 
 //--------------------style------------------------//
-
 const Row1 = styled.div`
-  width: 100%
-  height: 140px;
-  margin-bottom: 40px;
+  margin-bottom: 120px;
 `;
 
-const Row3 = styled.div``;
-
-//包Main、Aside
 const Row2 = styled.div`
-    display: flex;｀
-  `;
+  margin-bottom: 160px;
+`;
 
 //控制商品清單的寬度比例
 // const Main = styled.main`
@@ -49,11 +46,19 @@ function HomePage(props) {
   return (
     <>
       {/* <main> */}
-      <HomeCover></HomeCover>
+      <Row1>
+        <HomeCover></HomeCover>
+      </Row1>
       <Container>
-        <Row1></Row1>
-        <Row2></Row2>
-        <Row3></Row3>
+        <Row2>
+          <HomeContent1 header1="核心特質" header2="Profile" />
+        </Row2>
+        <Row2>
+          <HomeContent2 header1="專業技能" header2="Skill"></HomeContent2>
+        </Row2>
+        <Row2>
+          <HomeContent3 header1="過往經歷" header2="Experience"></HomeContent3>
+        </Row2>
       </Container>
       {/* </main> */}
     </>
