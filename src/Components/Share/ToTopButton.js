@@ -6,7 +6,7 @@ import { theme } from '../../Style/theme';
 import { ReactComponent as TopArrow } from '../../images/TopArrow.svg';
 
 //--------------------style-----------------------//
-const ToTopButtonWrap = styled.div`
+const ToTopButtonWrap = styled.span`
   width: 60px;
   height: 60px;
   border-radius: 30px;
@@ -14,7 +14,7 @@ const ToTopButtonWrap = styled.div`
   bottom: 100px;
   right: 25px;
   cursor: pointer;
-  background-color: ${theme.header3Color};
+  background-color: ${theme.primaryColor};
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px 0;
   visibility: ${({ toTop }) => toTop};
   ${'' /* border: none;  */}
@@ -51,7 +51,7 @@ function ToTopButton(props) {
     }
   }, []);
   function scrollToTop() {
-    let A = setInterval(scrollStep, 15);
+    let A = setInterval(scrollStep, 6);
     function scrollStep() {
       if (window.pageYOffset === 0) {
         clearInterval(A);
@@ -63,14 +63,16 @@ function ToTopButton(props) {
 
   return (
     <>
-      <ToTopButtonWrap
-        toTop={toTop}
-        onClick={() => {
-          scrollToTop();
-        }}
-      >
-        <TopArrow />
-      </ToTopButtonWrap>
+      <a href="#Chaoting">
+        <ToTopButtonWrap
+          toTop={toTop}
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
+          <TopArrow />
+        </ToTopButtonWrap>
+      </a>
     </>
   );
 }

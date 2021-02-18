@@ -10,11 +10,14 @@ const HomeCoverWrap = styled.div`
   width: 100%;
   ${'' /* height: 700px; */}
   min-width: 350px;
-  min-height: 700px;
+  min-height: 790px;
+  ${'' /* height: 790px; */}
   position: relative;
+  ${'' /* margin-top: 70px; */}
   background-attachment: fixed;
   background-image: url(${codingHand});
-  background-position: center center;
+  ${'' /* background-image: url('../../images/coding-hand.jpg'); */}
+  background-position: center -20%;
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
@@ -24,7 +27,7 @@ const HomeCoverWrap = styled.div`
     top: 0;
     left: 0;
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.6;
     width: 100%;
     height: 100%;
   }
@@ -44,21 +47,19 @@ const HomeCoverWrap = styled.div`
       color: #dedede;
     }
   }
-  @media (max-width: 767px) {
+  ${'' /* @media (max-width: 767px) {
     background-attachment: scroll;
-  }
+  } */}
 `;
 
 const HomeCover = (props) => {
   return (
     <HomeCoverWrap>
       <div></div>
-      <div class="header-text">
-        <h1>Hello !</h1>
-        <h1>I'm Chaoting Chang</h1>
-        <p class="caption">
-          一名前端工程師，保持開放的心態，擁抱新事物，在學習路上不斷成長，把喜歡的事物做到最好。
-        </p>
+      <div>
+        <h1>Hello ! I'm Tim</h1>
+        {/* <h1>I'm Tim</h1> */}
+        <p>一位前端工程師，熱衷於建構流暢的用戶體驗，勇於嘗試任何新技術。</p>
       </div>
     </HomeCoverWrap>
   );

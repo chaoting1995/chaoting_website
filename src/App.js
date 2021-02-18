@@ -1,10 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 //  樣式重置
 import 'normalize.css';
 //  制定路由
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import styled from '@emotion/styled';
+// 控制全域樣式
+import { Global, css } from '@emotion/react';
+// 主題配色
+import { theme } from './Style/theme';
+
 //--------------------所有頁面共用元件-----------------------//
 //頁首
 import Header from './Components/Share/Header';
@@ -14,15 +19,15 @@ import Container from './Components/Share/Container';
 //頁面切換時，要用捲軸讓頁面回到最上方
 import ScrollToTop from './Components/Share/ScrollToTop';
 //置頂鍵
-import ToTopButton from './Components/Share/ToTopButton';
+// import ToTopButton from './Components/Share/ToTopButton';
 
 //--------------------個別頁面元件-----------------------//
 import HomePage from './Pages/HomePage';
 
 //--------------------匯入子元件-----------------------//
 
-import HomeContent4 from './Components/Home/HomeContent4';
-import HomeContent5 from './Components/Home/HomeContent5';
+import HomeContent4 from './Components/Home/ShareContent4';
+import HomeContent5 from './Components/Home/ShareContent5';
 
 // //-------------------------GA---------------------------//
 // // GA
@@ -37,8 +42,9 @@ import HomeContent5 from './Components/Home/HomeContent5';
 // });
 
 //--------------------子元件-----------------------//
-const Row2 = styled.div`
-  margin-bottom: 160px;
+const Row = styled.div`
+  padding-top: 90px;
+  margin-bottom: 70px;
 `;
 
 //--------------------Component-----------------------//
@@ -69,19 +75,25 @@ function App() {
     // <Router history={history} basename={process.env.PUBLIC_URL}>
     <Router basename={process.env.PUBLIC_URL}>
       <>
+        <Global
+          styles={css`
+            body {
+              background-color: ${theme.backgroundColor};
+            }
+          `}
+        />
         {/* 放切頁時不重新渲染的部份 s*/}
         <Header currentPage={currentPage} />
-
         {/* 放切頁時不重新渲染的部份 e*/}
         {/* 路由設定開始 */}
 
         <ScrollToTop>
-          <ToTopButton />
+          {/* <ToTopButton /> */}
 
           <Switch>
             {/* 放"page資料夾"內的元件 */}
             <Route exact path="/">
-              <HomePage setCurrentPage={setCurrentPage} />
+              <HomePage setCurrentPage={setCurrentPage} id="Chaoting" />
             </Route>
             <Route exact path="/project"></Route>
             <Route exact path="/test">
@@ -93,13 +105,13 @@ function App() {
 
         {/* 放切頁時不重新渲染的部份 s*/}
         <Container>
-          <Row2>
-            <HomeContent4 header1="作品集" header2="Projects"></HomeContent4>
-          </Row2>
-          <Row2>
-            <HomeContent5 header1="聯絡兆廷" header2="Contact"></HomeContent5>
-          </Row2>
+          <Row id="Projects">
+            <HomeContent4 header1="作品列表" header2="Projects"></HomeContent4>
+          </Row>
         </Container>
+        <Row id="Contact">
+          <HomeContent5 header1="聯絡兆廷" header2="Contact"></HomeContent5>
+        </Row>
         {/* 放切頁時不重新渲染的部份 e*/}
       </>
     </Router>

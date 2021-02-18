@@ -6,16 +6,22 @@ import { theme } from '../../Style/theme';
 const Wrap = styled.div`
   h1 {
     display: inline-block;
-    margin: 0 10px 0 0;
-    color: ${theme.header1Color};
+    margin: 10px 0 0 0;
+    color: ${theme.lightBlack};
     font-size: ${theme.header1Size};
     font-weight: 600;
     letter-spacing: 1px;
+    transition: 0.5s;
+    @media only screen and (max-width: 767px) {
+      font-size: 45px;
+      letter-spacing: 0.39px;
+      padding: 0 10px;
+      transition: 0.5s;
+    }
   }
   h2 {
-    display: inline-block;
-    margin: 12px 0 0 0;
-    color: ${theme.header2Color};
+    margin: 0 10px;
+    color: ${theme.secondaryColor};
     font-size: ${theme.header2Size};
     font-weight: 700;
     line-height: 1.67;
@@ -26,8 +32,8 @@ const HomeHeader = (props) => {
   const { header1, header2 } = props;
   return (
     <Wrap>
-      <h1>{header1}</h1>
       <h2>{header2}</h2>
+      <h1>{header1}</h1>
     </Wrap>
   );
 };

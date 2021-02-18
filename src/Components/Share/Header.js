@@ -1,39 +1,92 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { withRouter } from 'react-router-dom';
-
+import { theme } from '../../Style/theme';
 //---------------------匯入icon------------------------//
-import { ReactComponent as Logo } from '../../images/logo.svg';
+// import { ReactComponent as Logo } from '../../images/logo.svg';
 
 //-----------------------style---------------------------//
 const HeaderWrap = styled.header`
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   box-sizing: border-box;
-  border-bottom: 1px solid white;
+  box-shadow: 0px 4px 6px 2px rgb(0 0 0 / 10%);
   ${'' /* margin-bottom: 40px; */}
-  svg {
-    width: 40px;
-    height: 40px;
-    ${'' /* background-color: #000; */}
-  }
-  h1 {
-    font-size: 28px;
-    font: 微軟正黑體;
-    margin-left: 10px;
-    font-weight: 400;
-  }
-  h2 {
-    font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  div {
+  background-color: ${theme.backgroundColor};
+  & > div:nth-of-type(1) {
+    ${'' /* position: absolute;
+    left: 20px; */}
     display: flex;
+    ${'' /* justify-content: center; */}
     align-items: center;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      background-color: ${theme.primaryColor};
+    }
+    a {
+      &,
+      &:link,
+      &:visited {
+        color: ${theme.primaryColor};
+        text-decoration: none;
+        transition: 0.1s;
+      }
+      &:hover {
+        color: ${theme.darkPrimary};
+        transition: 0.1s;
+      }
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      transition: 0.1s;
+      padding: 10px;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      ${'' /* background-color: #faf; */}
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    & > a {
+      &,
+      &:link,
+      &:visited {
+        color: ${theme.lightGray};
+        text-decoration: none;
+        transition: 0.1s;
+      }
+    }
+    a:hover {
+      color: ${theme.secondaryColor};
+      text-decoration: none;
+      transition: 0.1s;
+    }
+    li {
+      font-size: 18px;
+      padding: 15px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      cursor: pointer;
+      transition: 0.1s;
+    }
+  }
+
+  ${
+    '' /* a:hover {
+    color: ${theme.secondaryColor};
+    text-decoration: none;
+    transition: 0.1s;
+  } */
   }
 `;
 
@@ -45,10 +98,30 @@ const Header = (props) => {
     <>
       <HeaderWrap>
         <div>
-          <Logo />
-          <h1>電腦比比</h1>
+          <svg />
+          <a href="#Chaoting">
+            <h1>Tim</h1>
+          </a>
         </div>
-        <h2
+        <ul>
+          <a href="#Profile">
+            <li>PROFILE</li>
+          </a>
+          <a href="#Skill">
+            <li>SKILL</li>
+          </a>
+          <a href="#Experience">
+            <li>EXPERIENCE</li>
+          </a>
+          <a href="#Projects">
+            <li>PROJECTS</li>
+          </a>
+          <a href="#Contact">
+            <li>CONTACT</li>
+          </a>
+        </ul>
+
+        {/* <h2
           onClick={() => {
             if (currentPage === 'home') {
               props.history.push('/compare');
@@ -57,7 +130,7 @@ const Header = (props) => {
           }}
         >
           {currentPage === 'home' ? '比較表' : '回首頁'}
-        </h2>
+        </h2> */}
       </HeaderWrap>
     </>
   );

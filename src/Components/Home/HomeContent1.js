@@ -9,6 +9,7 @@ import HomeHeader from './HomeHeader';
 //----------------------style--------------------------//
 const Wrap = styled.div`
   position: relative;
+
   section {
     & > div {
       margin-top: 56px;
@@ -21,11 +22,11 @@ const Wrap = styled.div`
       left: 0;
       width: 60px;
       height: 60px;
-      background-color: ${theme.header3Color};
+      background-color: ${theme.primaryColor};
     }
     h3 {
       margin: 10px 0 0 0;
-      color: ${theme.header3Color};
+      color: ${theme.darkPrimary};
       font-size: ${theme.header3Size};
       font-weight: 500;
       line-height: 1.43;
@@ -34,7 +35,7 @@ const Wrap = styled.div`
     p {
       display: inline-block;
       margin: 10px 0 0 0;
-      color: ${theme.paragraphColor};
+      color: ${theme.darkGray};
       font-size: ${theme.paragraphSize};
       font-weight: 500;
       line-height: 1.38;
@@ -44,14 +45,19 @@ const Wrap = styled.div`
     }
   }
   & > div:last-child {
-    background-color: ${theme.header3Color};
+    background-color: ${theme.primaryColor};
     user-select: none;
     position: absolute;
     z-index: 1;
     top: 255px;
-    right: 50px;
+    right: 0px;
     width: 480px;
     height: 390px;
+  }
+  @media (max-width: 1100px) {
+    & > div:last-child {
+      display: none;
+    }
   }
 `;
 

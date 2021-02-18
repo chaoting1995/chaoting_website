@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 //-------------------匯入樣式套件-----------------------//
 import styled from '@emotion/styled';
 //設定頁面寬度
@@ -11,12 +11,13 @@ import HomeContent2 from '../Components/Home/HomeContent2';
 import HomeContent3 from '../Components/Home/HomeContent3';
 
 //--------------------style------------------------//
-const Row1 = styled.div`
-  margin-bottom: 120px;
+const RowHomeCover = styled.div`
+  margin-bottom: 60px;
 `;
 
-const Row2 = styled.div`
-  margin-bottom: 160px;
+const Row = styled.div`
+  padding-top: 90px;
+  margin-bottom: 70px;
 `;
 
 //控制商品清單的寬度比例
@@ -46,19 +47,19 @@ function HomePage(props) {
   return (
     <>
       {/* <main> */}
-      <Row1>
+      <RowHomeCover>
         <HomeCover></HomeCover>
-      </Row1>
+      </RowHomeCover>
       <Container>
-        <Row2>
+        <Row id="Profile">
           <HomeContent1 header1="核心特質" header2="Profile" />
-        </Row2>
-        <Row2>
+        </Row>
+        <Row id="Skill">
           <HomeContent2 header1="專業技能" header2="Skill"></HomeContent2>
-        </Row2>
-        <Row2>
+        </Row>
+        <Row id="Experience">
           <HomeContent3 header1="過往經歷" header2="Experience"></HomeContent3>
-        </Row2>
+        </Row>
       </Container>
       {/* </main> */}
     </>

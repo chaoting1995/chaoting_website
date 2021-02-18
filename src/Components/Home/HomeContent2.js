@@ -14,6 +14,19 @@ const Wrap = styled.div`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 15px;
+    transition: 0.5s;
+
+    @media only screen and (max-width: 1100px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 50px;
+      transition: 0.5s;
+    }
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 50px;
+      padding: 0 10px;
+      transition: 0.5s;
+    }
     & > div {
       display: flex;
       flex-direction: column;
@@ -22,11 +35,11 @@ const Wrap = styled.div`
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       border-radius: 20px;
-      border: 2px solid ${theme.header3Color};
+      border: 2px solid ${theme.primaryColor};
       padding-bottom: 28px;
       div:nth-of-type(1),
       img {
-        background-color: ${theme.header3Color};
+        background-color: ${theme.primaryColor};
         width: 120px;
         height: 120px;
         margin-top: -35px;
@@ -37,7 +50,7 @@ const Wrap = styled.div`
         animation-duration: 0.5s;
         animation-name: wave;
         animation-direction: alternate;
-        color: ${theme.header3Color};
+        color: ${theme.primaryColor};
         font-size: ${theme.header3Size};
         font-weight: 600;
         line-height: 1.43;
@@ -46,7 +59,7 @@ const Wrap = styled.div`
         margin: 10px 0 15px 0;
       }
       p {
-        color: ${theme.header2Color};
+        color: ${theme.lightGray};
         font-size: ${theme.header2Size};
         font-weight: 700;
         line-height: 1.38;
