@@ -19,10 +19,11 @@ import Container from './Components/Share/Container';
 //頁面切換時，要用捲軸讓頁面回到最上方
 import ScrollToTop from './Components/Share/ScrollToTop';
 //置頂鍵
-// import ToTopButton from './Components/Share/ToTopButton';
+import ToTopButton from './Components/Share/ToTopButton';
 
 //--------------------個別頁面元件-----------------------//
 import HomePage from './Pages/HomePage';
+// import Test from './Pages/Test.js';
 
 //--------------------匯入子元件-----------------------//
 
@@ -80,15 +81,18 @@ function App() {
             body {
               background-color: ${theme.backgroundColor};
             }
+            * ::selection {
+              background: ${theme.selectionColor};
+              color: #fff;
+            }
           `}
         />
         {/* 放切頁時不重新渲染的部份 s*/}
         <Header currentPage={currentPage} />
         {/* 放切頁時不重新渲染的部份 e*/}
         {/* 路由設定開始 */}
-
         <ScrollToTop>
-          {/* <ToTopButton /> */}
+          <ToTopButton />
 
           <Switch>
             {/* 放"page資料夾"內的元件 */}
@@ -96,19 +100,17 @@ function App() {
               <HomePage setCurrentPage={setCurrentPage} id="Chaoting" />
             </Route>
             <Route exact path="/project"></Route>
-            <Route exact path="/test">
-              {/* <ProductList /> */}
-            </Route>
+            <Route exact path="/test"></Route>
           </Switch>
         </ScrollToTop>
         {/* 路由設定結束 */}
-
         {/* 放切頁時不重新渲染的部份 s*/}
         <Container>
           <Row id="Projects">
-            <HomeContent4 header1="作品列表" header2="Projects"></HomeContent4>
+            <HomeContent4 header1="近期專案" header2="Projects"></HomeContent4>
           </Row>
         </Container>
+
         <Row id="Contact">
           <HomeContent5 header1="聯絡兆廷" header2="Contact"></HomeContent5>
         </Row>

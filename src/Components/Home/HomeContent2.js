@@ -108,6 +108,7 @@ const HomeContent2 = (props) => {
             <p>React Hook</p>
             <p>React Router</p>
             <p>React Redux</p>
+            <p>Material-UI</p>
           </SkillBox>
           <SkillBox header3="AJAX">
             <p>fetch/axios</p>

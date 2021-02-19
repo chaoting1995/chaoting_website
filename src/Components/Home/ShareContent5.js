@@ -12,6 +12,7 @@ const Wrap = styled.div`
   overflow: hidden;
   width: 100%;
   height: 750px;
+  ${'' /* margin-bottom: 60px; */}
   ${'' /* background-color: #faf; */}
   & > div {
     position: absolute;
@@ -72,7 +73,7 @@ const HomeContent5 = (props) => {
           <p>Email : chaoting666@gmail.com</p>
           <p>Github : https://github.com/chaoting1995</p>
           <p>
-            Resume :{' '}
+            Resume :
             <a href="https://www.cakeresume.com/s--KYRKWVqjhLf2S5xQBCA8sA--/chaoting13">
               CakeResume Link
             </a>

@@ -97,11 +97,8 @@ const Wrap = styled.div`
         }
       }
       &:hover > div:nth-of-type(1) {
-        opacity: 0.6;
+        opacity: 0.7;
         transition: 0.2s;
-        & > p {
-          opacity: 1;
-        }
       }
 
       ${'' /* Box Hole Mask */}
@@ -139,6 +136,9 @@ const Wrap = styled.div`
         pointer-events: none;
         transition: 0.2s;
       }
+      span:nth-of-type(2) {
+        padding: 0 5px;
+      }
       &:hover > span {
         margin-bottom: -30px;
         transition: 0.2s;
@@ -150,10 +150,16 @@ const Wrap = styled.div`
 //---------------children component---------------------//
 
 const ProjectBox = (props) => {
-  const { headerA, headerB, img } = props;
+  const { headerA, headerB, img, url } = props;
   return (
     <>
-      <ProjectBoxBG img1={img}>
+      <ProjectBoxBG
+        img1={img}
+        onClick={() => {
+          // window.location.href = url;
+          window.open(url, '_blank');
+        }}
+      >
         <div>
           <p>看作品</p>
           <p>See Proj</p>
@@ -168,6 +174,7 @@ const ProjectBox = (props) => {
 };
 
 const ProjectBoxBG = styled.div`
+  ${'' /* 作品圖片微調 */}
   background-image: url(${({ img1 }) => img1});
   background-size: ${({ img1 }) => {
     if (img1 === project3) return '350% !important';
@@ -177,6 +184,26 @@ const ProjectBoxBG = styled.div`
     if (img1 === project3) return '50% 50% !important';
     if (img1 === project5) return '0% 20% !important';
   }};
+  ${'' /* 背景顏色 */}
+  background-color: ${({ img1 }) => {
+    if (img1 === project1) return '#f5a016 !important';
+    if (img1 === project2) return '#507199 !important';
+    if (img1 === project3) return '#C8DAE6 !important';
+    if (img1 === project4) return '#dcc200 !important';
+    if (img1 === project5) return `lightgray !important`;
+    if (img1 === project6) return '#f48145 !important';
+  }};
+  ${'' /* 遮罩顏色 */}
+  & > div:nth-of-type(1) {
+    background-color: ${({ img1 }) => {
+      if (img1 === project1) return '#f5a016 !important';
+      if (img1 === project2) return '#507199 !important';
+      if (img1 === project3) return '#C8DAE6 !important';
+      if (img1 === project4) return '#dcc200 !important';
+      if (img1 === project5) return '#f48145 !important';
+      if (img1 === project6) return 'gray !important';
+    }};
+  }
 `;
 //--------------------component--------------------------//
 
@@ -187,34 +214,40 @@ const HomeContent4 = (props) => {
       <HomeHeader header1={header1} header2={header2} />
       <section>
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="拾餐 FoodGo"
+          headerB="品牌官網"
           img={project1}
+          url="https://www.youtube.com/watch?v=aZHW-grHMfU"
         />
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="電腦比比 Bibi Web"
+          headerB="比價網站"
           img={project2}
+          url="https://chaoting1995.github.io/bibi_web/"
         />
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="台灣天氣觀測 / 預報"
+          headerB="天氣盒子"
           img={project3}
+          url="https://chaoting1995.github.io/weather_app/"
         />
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="BMI 換算器"
+          headerB="換算工具"
           img={project4}
+          url="https://chaoting1995.github.io/bmi_converter_pwa/"
         />
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="喵皇推推 Cat Push"
+          headerB="小遊戲"
           img={project5}
+          url="https://chaoting1995.github.io/Jquery-practice/0921-%E7%B7%B4%E7%BF%92-%E8%B2%93%E5%92%AApush.html"
         />
         <ProjectBox
-          headerA="蛛思輿情分析平台"
-          headerB="動態圖表"
+          headerA="Todo-list App"
+          headerB="代辦事項"
           img={project6}
+          url="https://github.com/chaoting1995/todo_app"
         />
       </section>
     </Wrap>

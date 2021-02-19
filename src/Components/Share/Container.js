@@ -16,11 +16,6 @@ const ContainerWrap = styled.div`
   }
 `;
 // 界定網頁內容寬度
-const Container = (props) => {
-  return (
-    <>
-      <ContainerWrap>{props.children}</ContainerWrap>;
-    </>
-  );
-};
+const Container = (props) => <ContainerWrap>{props.children}</ContainerWrap>;
+
 export default Container;

@@ -33,7 +33,7 @@ const HomeCoverWrap = styled.div`
   }
   div:nth-of-type(2) {
     transform: rotateY(180deg);
-    max-width: 50%;
+    max-width: 55%;
     position: absolute;
     top: 50%;
     right: 10%;

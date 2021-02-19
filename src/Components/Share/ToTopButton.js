@@ -44,21 +44,36 @@ function ToTopButton(props) {
   const handleAppearToTopButton = useCallback((position = 'absolute') => {
     // let toTopButton = document.querySelector('.toTopButton');
     // 產品列表頁，沒有「.toTopButton元素」，加「 && toTopButton」才不會出錯
-    if (window.pageYOffset >= 200) {
+    if (window.pageYOffset >= 4200) {
       setToTop('visible');
-    } else if (window.pageYOffset < 69) {
+    } else if (window.pageYOffset < 4200) {
       setToTop('hidden');
     }
   }, []);
-  function scrollToTop() {
-    let A = setInterval(scrollStep, 6);
-    function scrollStep() {
-      if (window.pageYOffset === 0) {
-        clearInterval(A);
+
+  // 置頂用
+  // function scrollToTop() {
+  //   let A = setInterval(scrollStep, 6);
+  //   function scrollStep() {
+  //     if (window.pageYOffset === 0) {
+  //       clearInterval(A);
+  //     }
+  //     window.scroll(0, window.pageYOffset - 50);
+  //   }
+  // }
+
+  // 置頂用
+
+  const scrollToAnchor = (anchorName) => {
+    if (anchorName) {
+      // 找到錨點
+      let anchorElement = document.getElementById(anchorName);
+      // 如果對應id的錨點存在，就跳轉到錨點
+      if (anchorElement) {
+        anchorElement.scrollIntoView();
       }
-      window.scroll(0, window.pageYOffset - 50);
     }
-  }
+  };
   //--------------------JSX-----------------------//
 
   return (
@@ -67,7 +82,8 @@ function ToTopButton(props) {
         <ToTopButtonWrap
           toTop={toTop}
           onClick={() => {
-            scrollToTop();
+            // scrollToTop();
+            scrollToAnchor('Chaoting');
           }}
         >
           <TopArrow />
