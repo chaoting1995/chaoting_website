@@ -53,6 +53,13 @@ const Wrap = styled.div`
         color: ${theme.primaryColor};
         display: flex;
         align-items: center;
+        @media only screen and (max-width: 400px) {
+          &:last-child {
+            span:last-child {
+              display: none;
+            }
+          }
+        }
         a {
           &,
           &:link,
