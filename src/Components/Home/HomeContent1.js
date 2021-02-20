@@ -10,11 +10,11 @@ import { ReactComponent as Commu } from '../../images/profile-communicate.svg';
 import { ReactComponent as Think } from '../../images/profile-think.svg';
 import { ReactComponent as Study } from '../../images/profile-study.svg';
 import { ReactComponent as Race } from '../../images/profile-race.svg';
+import tangleCat from '../../images/tangle-cat.png';
 
 //----------------------style--------------------------//
 const Wrap = styled.div`
   position: relative;
-
   section {
     & > div {
       margin-top: 56px;
@@ -40,29 +40,44 @@ const Wrap = styled.div`
     }
     p {
       display: inline-block;
-      margin: 10px 0 0 0;
+      margin: 10px 0 20px 0;
       color: ${theme.darkGray};
       font-size: ${theme.paragraphSize};
       font-weight: 500;
       line-height: 1.38;
       letter-spacing: 0.8px;
-      width: 360px;
+      width: 450px;
       white-space: pre-wrap;
     }
   }
-  & > div:last-child {
-    background-color: ${theme.primaryColor};
+  & > div:last-child > img {
+    ${'' /* background-color: ${theme.primaryColor}; */}
     user-select: none;
     position: absolute;
     z-index: 1;
-    top: 255px;
-    right: 0px;
-    width: 480px;
-    height: 390px;
+    top: 300px;
+    right: 30px;
+    width: 380px;
+    ${'' /* height: 390px; */}
   }
   @media (max-width: 1100px) {
     & > div:last-child {
       display: none;
+    }
+  }
+  ${'' /* 探戈貓跳一下, */}
+  &:hover > div:last-child > img {
+    animation: ani 0.5s 1;
+    @keyframes ani {
+      0% {
+        top: 300px;
+      }
+      50% {
+        top: 250px;
+      }
+      100% {
+        top: 300px;
+      }
     }
   }
 `;
@@ -78,25 +93,36 @@ const HomeContent1 = (props) => {
         <div>
           <Commu />
           <h3>人際溝通</h3>
-          <p>山葵組設計的客製化網站不只好看，還很好用、好玩、好動感！</p>
+          <p>
+            好的協作始於順暢溝通。參與辯論活動，養成我有理有據、就事論事的做事風格，遇到與我觀點不同的人，我也樂於耐心溝通，圓融應對。
+          </p>
         </div>
         <div>
           <Think />
           <h3>歸納分析</h3>
-          <p>山葵組設計的客製化網站不只好看，還很好用、好玩、好動感！</p>
+          <p>
+            Work hard, work smart!
+            我喜歡將工作流程化，避免每次費心思考做法。熱衷於掌握工作流程中的每一步細節，時時思考更效率的做法、更簡化的方案。
+          </p>
         </div>
         <div>
           <Study />
           <h3>熱愛學習</h3>
-          <p>山葵組設計的客製化網站不只好看，還很好用、好玩、好動感！</p>
+          <p>
+            大四經營品牌公寓，從中學習與人協作、實現商業構想的經驗。而後投入網頁開發，學習前端技術。因此有別一般技術人才，我能跨領域結合前端開發經驗，及不動產相關涉略。
+          </p>
         </div>
         <div>
           <Race />
           <h3>勇於競爭</h3>
-          <p>山葵組設計的客製化網站不只好看，還很好用、好玩、好動感！</p>
+          <p>
+            不論是辯論競賽、創業挑戰，抑或是從無到有學習前端開發技術，我都能不畏挑戰、爭取勝出。
+          </p>
         </div>
       </section>
-      <div></div>
+      <div>
+        <img src={tangleCat} alt="" />
+      </div>
     </Wrap>
   );
 };

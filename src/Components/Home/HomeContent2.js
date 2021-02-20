@@ -72,20 +72,40 @@ const Wrap = styled.div`
         text-align: center;
       }
     }
+    ${'' /* 動態改變icon框線顏色 */}
+    & > div {
+      .Skill-AJAX-1,
+      .Skill-BE-1,
+      .Skill-JS-1,
+      .Skill-OtherTools-1,
+      .Skill-React-1,
+      .Skill-UI-1 {
+        fill: ${theme.lightPrimary};
+        ${'' /* fill: #faf; */}
+        ${'' /* opacity:0; */}
+      }
+    }
     ${'' /* 微調icon大小 */}
     & > div:nth-of-type(1) {
       svg {
-        margin-left: -5 px;
+        margin-left: -5px;
         width: 130px;
+      }
+    }
+    & > div:nth-of-type(5) {
+      svg {
+        width: 115px;
       }
     }
     & > div:nth-of-type(6) {
       svg {
-        width: 110px;
+        width: 105px;
+        margin-left: 5px;
       }
     }
   }
 `;
+
 //---------------children component---------------------//
 
 const SkillBox = (props) => {

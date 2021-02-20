@@ -26,13 +26,48 @@ const Wrap = styled.div`
     font-weight: 700;
     line-height: 1.67;
     letter-spacing: 0.82px;
+    display: flex;
+    align-items: center;
+    div {
+      width: 7px;
+      height: 7px;
+      border-radius: 10px;
+      margin: 0 7px;
+      display: inline-block;
+      background-color: ${theme.secondaryColor};
+    }
+  }
+  ${'' /* 標題微動畫，暫時方案 */}
+  transition: 0.5s;
+  &:hover h2 > div {
+    animation: ani 0.5s 1;
+    @keyframes ani {
+      0% {
+        margin-bottom: 0px;
+      }
+      25% {
+        margin-bottom: 15px;
+      }
+      75% {
+        margin-bottom: -15px;
+      }
+      100% {
+        margin-bottom: 0px;
+      }
+    }
   }
 `;
+//----------------------style--------------------------//
+
 const HomeHeader = (props) => {
   const { header1, header2 } = props;
   return (
     <Wrap>
-      <h2>{header2}</h2>
+      <h2>
+        <div />
+        {header2}
+        <div />
+      </h2>
       <h1>{header1}</h1>
     </Wrap>
   );

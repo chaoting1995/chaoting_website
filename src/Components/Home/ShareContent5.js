@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { theme } from '../../Style/theme';
-
+import { ReactComponent as CakeResume } from '../../images/Contact-cakeresume.svg';
+import { ReactComponent as Github } from '../../images/Contact-github.svg';
+import { ReactComponent as Mail } from '../../images/Contact-mail.svg';
 //----------------children component--------------------//
 // 大標、副標
 import HomeHeader from './HomeHeader';
@@ -34,11 +36,18 @@ const Wrap = styled.div`
     }
     section {
       margin: 40px 0 0 10px;
+      svg {
+        width: 20px;
+        fill: ${theme.primaryColor};
+        margin-right: 15px;
+      }
       p {
         margin-bottom: 30px;
         font-size: 18px;
         font-weight: 500;
         color: ${theme.primaryColor};
+        display: flex;
+        align-items: center;
         a {
           &,
           &:link,
@@ -47,6 +56,8 @@ const Wrap = styled.div`
             color: ${theme.primaryColor};
             text-decoration: none;
             transition: 0.1s;
+            display: flex;
+            align-items: center;
           }
           &:hover {
             color: ${theme.darkPrimary};
@@ -70,12 +81,23 @@ const HomeContent5 = (props) => {
         <section>
           <p>I'm Tim 張兆廷</p>
           <p>Welcome to contact with me! </p>
-          <p>Email : chaoting666@gmail.com</p>
-          <p>Github : https://github.com/chaoting1995</p>
+
           <p>
-            Resume :
+            <Mail />
+            <span>chaoting666@gmail.com</span>
+          </p>
+
+          <p>
+            <a href="https://github.com/chaoting1995">
+              <Github />
+              <span></span>https://github.com/chaoting1995
+            </a>
+          </p>
+          <p>
             <a href="https://www.cakeresume.com/s--KYRKWVqjhLf2S5xQBCA8sA--/chaoting13">
-              CakeResume Link
+              <CakeResume />
+              <span>https://reurl.cc/E2o1OA</span>
+              <span>（CakeResume）</span>
             </a>
           </p>
         </section>
