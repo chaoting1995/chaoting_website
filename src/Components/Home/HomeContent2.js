@@ -75,7 +75,7 @@ const Wrap = styled.div`
     ${'' /* 微調icon大小 */}
     & > div:nth-of-type(1) {
       svg {
-        margin-left: -5px;
+        margin-left: -5 px;
         width: 130px;
       }
     }
