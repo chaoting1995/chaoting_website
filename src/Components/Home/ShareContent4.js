@@ -125,6 +125,11 @@ const Wrap = styled.div`
           background-position: 50% 15%;
           transition: 0.2s;
         }
+        @media only screen and (max-width: 360px) {
+          background-size: 340%;
+          background-position: 50% 10%;
+          transition: 0.2s;
+        }
       }
       span {
         font-size: 16px;

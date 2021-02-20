@@ -30,6 +30,9 @@ const ToTopButtonWrap = styled.span`
     width: 37px;
     margin-right: 1px;
   }
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 //--------------------component-----------------------//
 

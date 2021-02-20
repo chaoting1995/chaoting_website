@@ -31,6 +31,11 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media only screen and (max-width: 470px) {
+      left: -200px;
+      transition: 0.2s;
+    }
     & > div {
       margin-top: 180px;
     }
