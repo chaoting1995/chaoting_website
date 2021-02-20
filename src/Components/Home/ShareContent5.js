@@ -90,14 +90,14 @@ const HomeContent5 = (props) => {
           <p>
             <a href="https://github.com/chaoting1995">
               <Github />
-              <span></span>https://github.com/chaoting1995
+              <span>https://github.com/chaoting1995</span>
             </a>
           </p>
           <p>
             <a href="https://www.cakeresume.com/s--KYRKWVqjhLf2S5xQBCA8sA--/chaoting13">
               <CakeResume />
               <span>https://reurl.cc/E2o1OA</span>
-              <span>（CakeResume）</span>
+              <span>（ CakeResume ）</span>
             </a>
           </p>
         </section>
