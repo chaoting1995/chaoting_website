@@ -115,6 +115,16 @@ const Wrap = styled.div`
         background-size: 110%;
         background-position: 50% 0%;
         transition: 0.2s;
+        @media only screen and (max-width: 550px) {
+          transition: 0.2s;
+          display: none;
+          & ~ span {
+            padding: 5px;
+            margin-bottom: 0px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        }
       }
       &:hover > div:nth-of-type(2) {
         background-size: 250%;
@@ -231,7 +241,7 @@ const HomeContent4 = (props) => {
           url="https://chaoting1995.github.io/bibi_web/"
         />
         <ProjectBox
-          headerA="台灣天氣觀測 / 預報"
+          headerA="台灣天氣觀測/預報"
           headerB="天氣盒子"
           img={project3}
           url="https://chaoting1995.github.io/weather_app/"
