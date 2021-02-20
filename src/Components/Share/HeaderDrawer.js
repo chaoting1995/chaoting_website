@@ -106,7 +106,7 @@ const TemporaryDrawer = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['TIM', 'SKILL', 'EXPERIENCE', 'PROJECTS', 'CONTACT'].map(
+        {['TIM', 'PROFILE', 'SKILL', 'EXPERIENCE', 'PROJECTS', 'CONTACT'].map(
           (text, index) => (
             <ALink href={IDConverter(text)} key={text}>
               <ListItem button>
