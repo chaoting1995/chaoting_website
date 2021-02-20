@@ -66,6 +66,9 @@ const Wrap = styled.div`
     }
   }
   ${'' /* 探戈貓跳一下, */}
+  ${'' /* &:hover {
+    background-color: #faa;
+  } */}
   &:hover > div:last-child > img {
     animation: ani 0.5s 1;
     @keyframes ani {
