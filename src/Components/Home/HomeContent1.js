@@ -60,15 +60,16 @@ const Wrap = styled.div`
     width: 380px;
     ${'' /* height: 390px; */}
   }
-  @media (max-width: 1100px) {
+  @media only screen and (max-width: 1100px) {
     & > div:last-child {
       display: none;
     }
   }
-  ${'' /* 探戈貓跳一下, */}
-  ${'' /* &:hover {
-    background-color: #faa;
-  } */}
+  ${'' /* 探戈貓跳一下 */}
+  &:hover {
+    background-color: ${theme.backgroundColor};
+    background-color: #faf;
+  }
   &:hover > div:last-child > img {
     animation: ani 0.5s 1;
     @keyframes ani {
