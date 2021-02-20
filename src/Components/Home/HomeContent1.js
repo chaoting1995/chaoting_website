@@ -67,7 +67,7 @@ const Wrap = styled.div`
   }
   ${'' /* 探戈貓跳一下 */}
   &:hover > div:last-child > img {
-    animation: ani 0.5s 1;
+    animation: ani 0.5s;
     @keyframes ani {
       0% {
         top: 300px;

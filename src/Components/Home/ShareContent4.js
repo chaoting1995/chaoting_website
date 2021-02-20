@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 // import { ReactComponent as HoleMask } from '../../images/hole-mask.svg';
-import holeMask from '../../images/hole-mask2.svg';
+import holeMask from '../../images/hole-mask3.svg';
 
 import project1 from '../../images/project-foodGo.png';
 import project2 from '../../images/project-bibiWeb.png';
