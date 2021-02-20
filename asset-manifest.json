@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/chaoting_website/static/css/main.d342c7d6.chunk.css",
-    "main.js": "/chaoting_website/static/js/main.f872fde0.chunk.js",
-    "main.js.map": "/chaoting_website/static/js/main.f872fde0.chunk.js.map",
+    "main.js": "/chaoting_website/static/js/main.911e4c11.chunk.js",
+    "main.js.map": "/chaoting_website/static/js/main.911e4c11.chunk.js.map",
     "runtime-main.js": "/chaoting_website/static/js/runtime-main.767da35e.js",
     "runtime-main.js.map": "/chaoting_website/static/js/runtime-main.767da35e.js.map",
     "static/css/2.679831fc.chunk.css": "/chaoting_website/static/css/2.679831fc.chunk.css",
@@ -27,7 +27,7 @@
     "static/media/Skill-UI.0b07cd40.svg": "/chaoting_website/static/media/Skill-UI.0b07cd40.svg",
     "static/media/TopArrow.82abd65d.svg": "/chaoting_website/static/media/TopArrow.82abd65d.svg",
     "static/media/coding-hand.f75810f5.jpg": "/chaoting_website/static/media/coding-hand.f75810f5.jpg",
-    "static/media/hole-mask2.242ebfca.svg": "/chaoting_website/static/media/hole-mask2.242ebfca.svg",
+    "static/media/hole-mask3.11991f29.svg": "/chaoting_website/static/media/hole-mask3.11991f29.svg",
     "static/media/logo.1161be75.svg": "/chaoting_website/static/media/logo.1161be75.svg",
     "static/media/profile-communicate.68a4e51d.svg": "/chaoting_website/static/media/profile-communicate.68a4e51d.svg",
     "static/media/profile-race.a78f3fa5.svg": "/chaoting_website/static/media/profile-race.a78f3fa5.svg",
@@ -45,6 +45,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.5f8816bc.chunk.js",
     "static/css/main.d342c7d6.chunk.css",
-    "static/js/main.f872fde0.chunk.js"
+    "static/js/main.911e4c11.chunk.js"
   ]
 }
