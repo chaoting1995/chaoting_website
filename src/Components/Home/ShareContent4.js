@@ -118,15 +118,15 @@ const Wrap = styled.div`
       }
       &:hover > div:nth-of-type(2) {
         background-size: 250%;
-        background-position: 50% 20%;
+        background-position: 50% 10%;
         transition: 0.2s;
         @media only screen and (max-width: 620px) {
-          background-size: 270%;
-          background-position: 50% 15%;
+          background-size: 340%;
+          background-position: 50% 10%;
           transition: 0.2s;
         }
         @media only screen and (max-width: 360px) {
-          background-size: 340%;
+          background-size: 370%;
           background-position: 50% 10%;
           transition: 0.2s;
         }
