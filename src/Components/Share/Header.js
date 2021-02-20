@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { theme } from '../../Style/theme';
 
 //---------------------匯入icon------------------------//
-// import { ReactComponent as Logo } from '../../images/logo.svg';
+import { ReactComponent as Logo } from '../../images/logo.svg';
 //---------------------匯入子元件------------------------//
 import HeaderDrawer from './HeaderDrawer';
 
@@ -28,11 +28,18 @@ const HeaderWrap = styled.header`
     display: flex;
     ${'' /* justify-content: center; */}
     align-items: center;
+    cursor: pointer;
+    transition: 0.1s;
+    &:hover .cls-1,
+    a {
+      fill: ${theme.primaryColor};
+      color: ${theme.primaryColor};
+      transition: 0.1s;
+    }
 
     svg {
       width: 40px;
       height: 40px;
-      background-color: ${theme.primaryColor};
     }
     a {
       &,
@@ -61,6 +68,7 @@ const HeaderWrap = styled.header`
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin-right: -20px;
     & > a {
       &,
       &:link,
@@ -100,16 +108,16 @@ const HeaderWrap = styled.header`
   }
 `;
 
-const scrollToAnchor = (anchorName) => {
-  if (anchorName) {
-    // 找到錨點
-    let anchorElement = document.getElementById(anchorName);
-    // 如果對應id的錨點存在，就跳轉到錨點
-    if (anchorElement) {
-      anchorElement.scrollIntoView();
-    }
-  }
-};
+// const scrollToAnchor = (anchorName) => {
+//   if (anchorName) {
+//     // 找到錨點
+//     let anchorElement = document.getElementById('Chaoting');
+//     // 如果對應id的錨點存在，就跳轉到錨點
+//     if (anchorElement) {
+//       anchorElement.scrollIntoView();
+//     }
+//   }
+// };
 
 //---------------------component------------------------//
 
@@ -120,7 +128,9 @@ const Header = (props) => {
     <>
       <HeaderWrap>
         <div>
-          <svg onClick={() => scrollToAnchor('Chaoting')} />
+          <a href="#Chaoting">
+            <Logo />
+          </a>
           <a href="#Chaoting">
             <h1>Tim</h1>
           </a>
@@ -141,7 +151,6 @@ const Header = (props) => {
           <a href="#Contact">
             <li>CONTACT</li>
           </a>
-          <li></li>
         </ul>
         <HeaderDrawer />
         {/* <h2

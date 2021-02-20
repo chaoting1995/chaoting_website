@@ -6,6 +6,12 @@ import { theme } from '../../Style/theme';
 // 大標、副標
 import HomeHeader from './HomeHeader';
 
+import { ReactComponent as UIIcon } from '../../images/Skill-UI.svg';
+import { ReactComponent as JSIcon } from '../../images/Skill-JS.svg';
+import { ReactComponent as ReactIcon } from '../../images/Skill-React.svg';
+import { ReactComponent as AJAXIcon } from '../../images/Skill-AJAX.svg';
+import { ReactComponent as BEIcon } from '../../images/Skill-BE.svg';
+import { ReactComponent as OthersIcon } from '../../images/Skill-OtherTools.svg';
 //----------------------style--------------------------//
 const Wrap = styled.div`
   section {
@@ -38,11 +44,10 @@ const Wrap = styled.div`
       border: 2px solid ${theme.primaryColor};
       padding-bottom: 28px;
       div:nth-of-type(1),
-      img {
-        background-color: ${theme.primaryColor};
+      svg {
+        ${'' /* background-color: ${theme.primaryColor}; */}
         width: 120px;
-        height: 120px;
-        margin-top: -35px;
+        margin-top: -25px;
         user-select: none;
       }
       h3 {
@@ -67,6 +72,18 @@ const Wrap = styled.div`
         text-align: center;
       }
     }
+    ${'' /* 微調icon大小 */}
+    & > div:nth-of-type(1) {
+      svg {
+        margin-left: -5px;
+        width: 130px;
+      }
+    }
+    & > div:nth-of-type(6) {
+      svg {
+        width: 110px;
+      }
+    }
   }
 `;
 //---------------children component---------------------//
@@ -76,7 +93,14 @@ const SkillBox = (props) => {
   return (
     <>
       <div>
-        <div>{/* <img src="" alt="" /> */}</div>
+        <div>
+          {header3 === 'HTML/CSS' && <UIIcon />}
+          {header3 === 'JavaScript' && <JSIcon />}
+          {header3 === 'ReactJS' && <ReactIcon />}
+          {header3 === 'AJAX' && <AJAXIcon />}
+          {header3 === 'Back End' && <BEIcon />}
+          {header3 === 'Other Tools' && <OthersIcon />}
+        </div>
         <h3>{header3}</h3>
         <div>{props.children}</div>
       </div>
