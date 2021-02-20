@@ -46,7 +46,7 @@ const Wrap = styled.div`
       font-weight: 500;
       line-height: 1.38;
       letter-spacing: 0.8px;
-      width: 450px;
+      max-width: 450px;
       white-space: pre-wrap;
     }
   }
