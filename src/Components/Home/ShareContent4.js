@@ -253,7 +253,7 @@ const HomeContent4 = (props) => {
           url="https://chaoting1995.github.io/bmi_converter_pwa/"
         />
         <ProjectBox
-          headerA="喵皇推推 Cat Push"
+          headerA="喵皇推推Cat-Push"
           headerB="小遊戲"
           img={project5}
           url="https://chaoting1995.github.io/Jquery-practice/0921-%E7%B7%B4%E7%BF%92-%E8%B2%93%E5%92%AApush.html"
