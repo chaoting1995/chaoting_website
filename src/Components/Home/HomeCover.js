@@ -15,15 +15,17 @@ const HomeCoverWrap = styled.div`
   position: relative;
   ${'' /* margin-top: 70px; */}
   background-attachment: fixed;
-  @media (max-width: 550px) {
-    background-attachment: scroll;
-  }
   background-image: url(${codingHand});
   ${'' /* background-image: url('../../images/coding-hand.jpg'); */}
   background-position: center -20%;
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
+  @media (max-width: 550px) {
+    background-attachment: scroll;
+    min-height: 600px;
+    background-position: -120px 60px;
+  }
 
   div:nth-of-type(1) {
     position: absolute;
