@@ -23,7 +23,7 @@ const HomeCoverWrap = styled.div`
   transform: rotateY(180deg);
   @media (max-width: 550px) {
     background-attachment: scroll;
-    min-height: 600px;
+    min-height: 650px;
     background-position: -120px 60px;
   }
 
