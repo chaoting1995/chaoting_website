@@ -75,7 +75,7 @@ const Wrap = styled.div`
         font-size: 16px;
         font-weight: 400;
         color: ${theme.lightBlack};
-        line-height: 2rem;
+        line-height: 1.8rem;
         width: 100%;
         margin-bottom: 1rem;
         letter-spacing: 1px;
@@ -118,20 +118,18 @@ const HomeContent3 = (props) => {
               <h5>完整學習網頁開發相關技術</h5>
               ・歷時4個月，582小時的培訓，及每週超過20小時的額外投入
               <br />
-              ・學習HTML5、CSS3、Javascript、jQuery等前端基本技術
+              <b>・學習前端相關技術</b>，包含
+              HTML5、CSS3、JS、jQuery、ReactJS、AJAX
               <br />
-              ・學習前端框架ReactJS，包含React Hooks、React Router的應用
-              <br />
-              ・學習後端相關技術，包含 Node.js、PHP、MySQL
+              <b>・學習後端相關技術</b>，包含 Node.js、PHP、MySQL
               <br />
             </li>
             <li>
               <h5>所學技術實踐於專案中</h5>
-              ・完成團隊協作專案--具備前後端的電商網站，負責「購物車」與「訂單頁面」
+              ・完成團隊協作專案，一個具備前後端的電商網站，負責「購物車」與「訂單頁面」
               <br />
-              ・將HTML、CSS、Javascript等技術，運用於網頁開發
+              ・將HTML、CSS、JS等技術，運用於網頁開發，以React為基礎，應用MySQL與資料庫溝通、Node.js建構API、Fetch串接API
               <br />
-              ・以React為基礎，應用MySQL與資料庫溝通、Node.js建構API、Fetch串接API
             </li>
           </ul>
         </ExperienceBox>
