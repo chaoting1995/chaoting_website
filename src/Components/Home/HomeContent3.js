@@ -75,15 +75,15 @@ const Wrap = styled.div`
         font-size: 16px;
         font-weight: 400;
         color: ${theme.lightBlack};
-        line-height: 1.8rem;
+        line-height: 2rem;
         width: 100%;
         margin-bottom: 1rem;
         letter-spacing: 1px;
       }
     }
-    & > div:nth-of-type(1) h3 {
+    ${'' /* & > div:nth-of-type(1) h3 {
       white-space: nowrap;
-    }
+    } */}
   }
 `;
 //-----------children component:經歷盒子---------------------//
@@ -111,22 +111,27 @@ const HomeContent3 = (props) => {
       <section>
         <ExperienceBox
           time="2020 July. - 2020 Nov."
-          header="資策會 - 前端工程師培訓"
+          header="資訊工業策進會 - 前端工程師培訓"
         >
           <ul>
             <li>
-              <h5>系統化學習前端相關技術</h5>
-              填補自學遇到的盲點，加深 JavaScript 基本概念，並學習React 框架。
+              <h5>完整學習網頁開發相關技術</h5>
+              ・歷時4個月，582小時的培訓，及每週超過20小時的額外投入
+              <br />
+              ・學習HTML5、CSS3、Javascript、jQuery等前端基本技術
+              <br />
+              ・學習前端框架ReactJS，包含React Hooks、React Router的應用
+              <br />
+              ・學習後端相關技術，包含 Node.js、PHP、MySQL
+              <br />
             </li>
             <li>
-              <h5>學習後端，增加前端廣度</h5>
-              課程包含 Node.js、PHP、MySQL
-              ，透過後端語言實際撰寫商品後台，加深前後端資料傳送的概念及 RESTful
-              API 的操作 。
-            </li>
-            <li>
-              <h5>累積專案協作經驗</h5>
-              資策會畢業專題，從功能發想及聚焦、網頁風格設計、前端功能，到後端API撰寫、資料庫建置，打造友善用戶的品牌官網，提供用戶流暢的訂餐服務。
+              <h5>所學技術實踐於專案中</h5>
+              ・完成團隊協作專案--具備前後端的電商網站，負責「購物車」與「訂單頁面」
+              <br />
+              ・將HTML、CSS、Javascript等技術，運用於網頁開發
+              <br />
+              ・以React為基礎，應用MySQL與資料庫溝通、Node.js建構API、Fetch串接API
             </li>
           </ul>
         </ExperienceBox>
