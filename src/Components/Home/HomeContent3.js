@@ -81,6 +81,9 @@ const Wrap = styled.div`
         letter-spacing: 1px;
       }
     }
+    & > div:nth-of-type(1) h3 {
+      white-space: nowrap;
+    }
   }
 `;
 //-----------children component:經歷盒子---------------------//

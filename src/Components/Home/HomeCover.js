@@ -15,6 +15,9 @@ const HomeCoverWrap = styled.div`
   position: relative;
   ${'' /* margin-top: 70px; */}
   background-attachment: fixed;
+  @media (max-width: 550px) {
+    background-attachment: scroll;
+  }
   background-image: url(${codingHand});
   ${'' /* background-image: url('../../images/coding-hand.jpg'); */}
   background-position: center -20%;

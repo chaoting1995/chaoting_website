@@ -43,11 +43,10 @@ const Wrap = styled.div`
       border-radius: 20px;
       border: 2px solid ${theme.primaryColor};
       padding-bottom: 28px;
-      div:nth-of-type(1),
-      svg {
+      div:nth-of-type(1) > svg {
         ${'' /* background-color: ${theme.primaryColor}; */}
         width: 120px;
-        margin-top: -25px;
+        margin-top: -50px;
         user-select: none;
       }
       h3 {
@@ -62,6 +61,7 @@ const Wrap = styled.div`
         letter-spacing: 0.4px;
         text-align: center;
         margin: 10px 0 15px 0;
+        white-space: nowrap;
       }
       p {
         color: ${theme.lightGray};
@@ -80,27 +80,38 @@ const Wrap = styled.div`
       .Skill-OtherTools-1,
       .Skill-React-1,
       .Skill-UI-1 {
-        fill: ${theme.lightPrimary};
+        fill: ${theme.primaryColor};
         ${'' /* fill: #faf; */}
         ${'' /* opacity:0; */}
       }
     }
     ${'' /* 微調icon大小 */}
-    & > div:nth-of-type(1) {
-      svg {
-        margin-left: -5px;
-        width: 130px;
+    & > div>div:nth-of-type(1)>svg {
+      @media only screen and (max-width: 400px) {
+        ${'' /* background-color: #faf; */}
+        width: 90px;
+        transition: 0.5s;
       }
     }
-    & > div:nth-of-type(5) {
-      svg {
-        width: 115px;
+    & > div:nth-of-type(1) > div:nth-of-type(1) > svg {
+      width: 130px;
+      @media only screen and (max-width: 400px) {
+        width: 97px !important;
+        transition: 0.5s;
       }
     }
-    & > div:nth-of-type(6) {
-      svg {
-        width: 105px;
-        margin-left: 5px;
+    & > div:nth-of-type(5) > div:nth-of-type(1) > svg {
+      width: 115px;
+      @media only screen and (max-width: 400px) {
+        width: 90px !important;
+        transition: 0.5s;
+      }
+    }
+    & > div:nth-of-type(6) div:nth-of-type(1) > svg {
+      width: 105px;
+      @media only screen and (max-width: 400px) {
+        width: 80px !important;
+        transition: 0.5s;
       }
     }
   }

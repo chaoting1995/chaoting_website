@@ -30,16 +30,15 @@ const HeaderWrap = styled.header`
     align-items: center;
     cursor: pointer;
     transition: 0.1s;
-    &:hover .cls-1,
-    a {
-      fill: ${theme.primaryColor};
-      color: ${theme.primaryColor};
-      transition: 0.1s;
-    }
-
     svg {
       width: 40px;
       height: 40px;
+      .logo1 {
+        fill: ${theme.logoColor};
+      }
+      .logo2 {
+        fill: ${theme.selectionColors};
+      }
     }
     a {
       &,
@@ -49,9 +48,11 @@ const HeaderWrap = styled.header`
         text-decoration: none;
         transition: 0.1s;
       }
-      &:hover {
+      ${
+        '' /* &:hover {
         color: ${theme.primaryColor};
         transition: 0.1s;
+      } */
       }
     }
     h1 {
@@ -61,9 +62,17 @@ const HeaderWrap = styled.header`
       padding: 10px;
       letter-spacing: 0.8px;
       cursor: pointer;
-      ${'' /* background-color: #faf; */}
+      color: ${theme.darkPrimary};
+      ${'' /* background-color: #faf; */};
+    }
+    &:hover .logo1,
+    &:hover h1 {
+      fill: ${theme.primaryColor};
+      color: ${theme.primaryColor};
+      transition: 0.1s;
     }
   }
+  ${'' /* navbar各項目 */}
   ul {
     list-style-type: none;
     display: flex;
@@ -122,8 +131,13 @@ const HeaderWrap = styled.header`
 //---------------------component------------------------//
 
 const Header = (props) => {
+  //---------------------state & props------------------------//
   // eslint-disable-next-line
   const { currentPage } = props;
+  //---------------------handle------------------------//
+
+  //---------------------JSX------------------------//
+
   return (
     <>
       <HeaderWrap>

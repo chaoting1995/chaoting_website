@@ -23,7 +23,7 @@ const Wrap = styled.div`
     left: calc(50% - 420px);
     height: 750px;
     width: 840px;
-    background-color: #fff;
+    background-color: ${theme.circleBackgroundColor};
     border-radius: 50%;
     margin: 0 auto;
     padding-left: 200px;
